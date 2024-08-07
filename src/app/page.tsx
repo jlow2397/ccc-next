@@ -1,113 +1,121 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+
+const variants = {
+  enter: (direction: number) => {
+    return {
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  exit: (direction: number) => {
+    return {
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="w-full grid grid-cols-2 gap-5 max-w-screen-lg mx-auto py-20 px-8 pb-40">
+      <div
+        className="col-span-full flex relative justify-center rounded-lg items-center p-20"
+        style={{ background: "left / cover url(/donation.png)" }}
+      >
+        <motion.div
+          initial={{ opacity: 0, rotateY: "-94deg" }}
+          animate={{ opacity: 1, rotateY: "0deg" }}
+          className="p-4 mb-20 relative rounded-lg shadow-lg bg-white opening-animation mx-auto flex justify-center items-center duration-150 card-animation"
+        >
+          <img
+            src="/ccc.png"
+            className="max-h-[300px] min-h-[300px] aspect-square object-cover object-center"
+            alt="logo"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="absolute left-0 -bottom-12 px-3 py-2 rounded bg-white font-medium hover:bg-gray-100 duration-100 hover:text-blue-700"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <a href="/#contact">Contact Us</a>
+          </motion.div>
+        </motion.div>
+      </div>
+      <div className="col-span-full mt-20">
+        <h3 className="text-xl font-medium">Our Story</h3>
+      </div>
+      <div className="col-span-2 flex flex-col gap-10 min-h-[80vh] justify-center text-3xl lg:text-5xl/tight">
+        We have so many resources in our country and one of those resources is
+        an abundance of clothing.
+        <div className="w-full min-h-[400px] bg-gray-100 rounded mb-auto"></div>
+      </div>
+      <div className="col-span-2 flex flex-col gap-10 min-h-screen justify-center text-3xl lg:text-5xl/tight">
+        Sometimes sadly, clothes are thrown out because a store may not be able
+        to sell them and they want to get rid of excess inventory.
+        <div className="w-full min-h-[400px] bg-gray-100 rounded"></div>
+      </div>
+      <div className="col-span-2 text-3xl lg:text-5xl/tight my-20 min-h-[80vh]">
+        <motion.div
+          className="sticky top-1/4"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 100 }}
+          viewport={{ margin: "-100px", amount: "all" }}
+        >
+          Wouldn’t it be nice to be able to put some of the “excess” clothing
+          our country has into the hands of those who really need them, the
+          unhoused or underserved families who may not be able afford much
+          clothing for their families?
+        </motion.div>
+      </div>
+      <div className="col-span-2 text-2xl text-center p-10 m-20 border border-gray-200 rounded-lg shadow-sm duration-200 hover:shadow-xl">
+        Our mission is to gather clothing from various sources so that we can
+        get clothing into the hands of those who need it.
+        <div className="flex justify-center items-center gap-2 my-10 relative">
+          <div className="w-full min-h-[400px] bg-gray-100 rounded"></div>
+          <div className="bg-white flex items-center justify-center scale-[-1] rounded h-8 w-8 absolute left-2 top-1/2 -translate-y-1/2 border border-gray-100 duration-100 hover:border-gray-300">
+            {"‣"}
+          </div>
+          <div className="bg-white flex items-center justify-center rounded h-8 w-8 absolute right-2 top-1/2 -translate-y-1/2 border border-gray-100 duration-100 hover:border-gray-300">
+            {"‣"}
+          </div>
         </div>
+        Our focus will be the unhoused and underserved in the Los Angeles area.
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="col-span-2">
+        In the Bible it says in James 2:15-16, If a brother or sister is without
+        clothes and one of you says to them, &quot;Go in peace, be warmed and be
+        filled,&quot; and yet you do not give them what is necessary for their
+        body, what use is that? Let&apos;s do what we can to provide the
+        necessary clothing to those who have a need!
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      <div className="col-span-full mt-20">
+        <h3 id="contact" className="text-xl font-medium">
+          Contact Us
+        </h3>
+      </div>
+      <div className="col-span-2">
+        Compassion Clothing Closet
+        <br /> P. O. Box 3844
+        <br /> Torrance, CA 90510
+        <br />
+        <br />
+        Email:{" "}
         <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+          href="mailto:compassionclothingcloset@gmail.com"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          compassionclothingcloset@gmail.com
         </a>
       </div>
-    </main>
+    </div>
   );
 }
