@@ -71,7 +71,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY - Math.max(1000, window.innerHeight));
+      setScrollY(window.scrollY - Math.max(window.innerHeight - 200));
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -92,7 +92,7 @@ export default function Home() {
         >
           <img
             src="/logo.jpeg"
-            className="max-h-[300px] min-h-[300px] aspect-square object-contain object-center"
+            className="max-h-[300px] sm:min-h-[300px] aspect-square object-contain object-center"
             alt="logo"
           />
           <motion.div
@@ -114,11 +114,17 @@ export default function Home() {
           an abundance of clothing.
           <div
             className={
-              "w-1/2 my-10 h-[400px] overflow-hidden bg-gray-100 rounded duration-150 ease-in-out " +
+              "w-1/2 my-10 h-[400px] overflow-hidden relative bg-gray-100 rounded duration-150 ease-in-out bg-cover bg-center " +
               (scrollY > 0 ? "translate-x-full" : "translate-x-0")
             }
+            style={{
+              backgroundImage: scrollY > 0 ? "url(/3.png)" : "url(/5.png)",
+            }}
           >
-            <img src={scrollY > 0 ? "/3.png" : "/5.png"} className="w-full" />
+            {/* <img
+              src={scrollY > 0 ? "/3.png" : "/5.png"}
+              className="h-full absolute right-0 top-0  sm:h-auto sm:w-full"
+            /> */}
           </div>
         </div>
       </div>
@@ -143,14 +149,14 @@ export default function Home() {
           </div>
         </motion.div>
       </div>
-      <div className="col-span-2 text-2xl text-center p-10 m-20 border border-gray-200 rounded-lg shadow-sm duration-200 hover:shadow-xl">
+      <div className="col-span-2 text-2xl text-center p-10 m-0 sm:m-20 border border-gray-200 rounded-lg shadow-sm duration-200 hover:shadow-xl">
         Our mission is to gather clothing from various sources so that we can
         get clothing into the hands of those who need it.
         <div className="flex justify-center items-center gap-2 my-10 relative">
           <div className="w-full h-[400px] relative bg-gray-100 rounded flex items-center justify-center overflow-hidden">
             <AnimatePresence>
               <motion.img
-                className="h-full absolute"
+                className="h-full absolute max-w-none"
                 key={currentIndex}
                 src={images[currentIndex]}
                 initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
