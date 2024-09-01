@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence, useScroll } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const slideVariants = {
   hiddenRight: {
@@ -108,7 +108,7 @@ export default function Home() {
       <div className="col-span-full mt-20">
         <h3 className="text-xl font-medium">Our Story</h3>
       </div>
-      <div className="col-span-2 flex flex-col gap-10 min-h-[100vh] justify-start text-3xl lg:text-5xl/tight">
+      <div className="col-span-2 flex flex-col gap-10 min-h-[100vh] justify-start text-xl lg:text-3xl">
         <div className="sticky top-10">
           We have so many resources in our country and one of those resources is
           an abundance of clothing.
@@ -128,16 +128,16 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="col-span-2 flex flex-col gap-10 justify-start min-h-[40vh] text-3xl lg:text-5xl/tight">
+      <div className="col-span-2 flex flex-col gap-10 justify-start min-h-[40vh] text-xl lg:text-3xl">
         Sometimes sadly, clothes are thrown out because a store may not be able
         to sell them and they want to get rid of excess inventory.
       </div>
-      <div className="col-span-2 text-3xl lg:text-5xl/tight my-20 min-h-[80vh]">
+      <div className="col-span-2 text-xl lg:text-3xl my-20 min-h-[80vh]">
         <motion.div
           className="sticky top-1/4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 100 }}
-          viewport={{ margin: "-20% 0px -20% 0px", amount: "all" }}
+          viewport={{ margin: "-10% 0px -10% 0px", amount: "all" }}
         >
           Wouldn’t it be nice to be able to put some of the “excess” clothing
           our country has into the hands of those who really need them,
@@ -182,11 +182,11 @@ export default function Home() {
         Our focus will be the unhoused and underserved in the Los Angeles area.
       </div>
       <div className="col-span-2">
-        In the Bible it says in James 2:15-16, If a brother or sister is without
-        clothes and one of you says to them, &quot;Go in peace, be warmed and be
-        filled,&quot; and yet you do not give them what is necessary for their
-        body, what use is that? Let&apos;s do what we can to provide the
-        necessary clothing to those who have a need!
+        In the Bible it says in James 2:15-16, &quot;If a brother or sister is
+        without clothes and one of you says to them, &lsquo;Go in peace, be
+        warmed and be filled,&rsquo; and yet you do not give them what is
+        necessary for their body, what use is that? Let&apos;s do what we can to
+        provide the necessary clothing to those who have a need!&quot;
       </div>
       <div className="col-span-full mt-20">
         <h3 id="contact" className="text-xl font-medium">
