@@ -202,9 +202,9 @@ export default function Home() {
         Email:{" "}
         <a
           className="text-blue-500 hover:underline"
-          href="mailto:compassionclothingcloset@gmail.com"
+          href="mailto:info@compassionclothingcloset.org"
         >
-          compassionclothingcloset@gmail.com
+          info@compassionclothingcloset.org
         </a>
       </div>
     </div>
