@@ -43,7 +43,7 @@ const itemVariants = {
   },
 };
 
-const images = ["/2.png", "/1.png", "/4.png"];
+const images = ["/beacon_light_1.jpg", "/beacon_light_2.jpg"];
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -185,8 +185,11 @@ export default function Home() {
         In the Bible it says in James 2:15-16, &quot;If a brother or sister is
         without clothes and one of you says to them, &lsquo;Go in peace, be
         warmed and be filled,&rsquo; and yet you do not give them what is
-        necessary for their body, what use is that? Let&apos;s do what we can to
-        provide the necessary clothing to those who have a need!&quot;
+        necessary for their body, what use is that?&quot;
+        <br />
+        <br />
+        Let&apos;s do what we can to provide the necessary clothing to those who
+        have a need!
       </div>
       <div className="col-span-full mt-20">
         <h3 id="contact" className="text-xl font-medium">
