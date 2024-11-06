@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Compassion Clothing Closet",
   description:
     "Our mission is to gather clothing from various sources so that we can get clothing into the hands of those who need it.",
+  icons: [
+    {
+      rel: "icon",
+      url: "/logo.jpeg",
+      type: "image/jpeg",
+    },
+  ],
 };
 
 export default function RootLayout({
