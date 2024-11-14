@@ -80,7 +80,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full grid grid-cols-2 gap-5 max-w-screen-lg mx-auto py-20 px-8 pb-40">
+    <>
       <div
         className="col-span-full flex relative justify-center rounded-lg items-center p-20"
         style={{ background: "left / cover url(/donation.png)" }}
@@ -210,6 +210,6 @@ export default function Home() {
           info@compassionclothingcloset.org
         </a>
       </div>
-    </div>
+    </>
   );
 }
