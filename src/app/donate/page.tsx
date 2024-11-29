@@ -9,6 +9,16 @@ export default function DonatePage() {
       No contribution is too small as we appreciate any gift you would like to
       make. You can donate online here or send a check to our address located on
       the Contact tab.
+      <br />
+      <br />
+      <a
+        href="https://donate.stripe.com/00g5nmgxY8S3aB2000"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="py-2 px-3 rounded bg-slate-50 hover:bg-slate-100 shadow-lg hover:shadow-md border border-slate-200 duration-150 font-medium"
+      >
+        Donate Here
+      </a>
     </div>
   );
 }
