@@ -7,10 +7,10 @@ export default function AboutPage() {
           members of the Bread of Life Church in Torrance, CA.
         </div>
       </div>
-      <div className="col-span-1">
-        <img src="/profiles/helen.png" />
+      <div className="col-span-2 sm:col-span-1">
+        <img className="max-w-xs w-full mr-auto" src="/profiles/helen.png" />
       </div>
-      <div className="col-span-1 md:col-span-3">
+      <div className="col-span-2 sm:col-span-1 md:col-span-3">
         <h3 className="text-lg font-medium">Helen Low</h3>
         <span className="text-gray-600 text-sm">Founder and CEO</span>
         <br />
@@ -30,10 +30,10 @@ export default function AboutPage() {
         Business.
       </div>
 
-      <div className="ol-span-1">
-        <img src="/profiles/nicole.png" />
+      <div className="col-span-2 sm:col-span-1">
+        <img className="max-w-xs w-full mr-auto" src="/profiles/nicole.png" />
       </div>
-      <div className="col-span-1 md:col-span-3">
+      <div className="col-span-2 sm:col-span-1 md:col-span-3">
         <h3 className="text-lg font-medium">Nicole Chang</h3>
         <span className="text-gray-600 text-sm">
           CFO and Founding Board Member
@@ -52,10 +52,10 @@ export default function AboutPage() {
         University, Pomona and an MBA degree from University of Southern
         California, Marshall School of Business.
       </div>
-      <div className="col-span-1">
-        <img src="/profiles/arly.png" />
+      <div className="col-span-2 sm:col-span-1">
+        <img className="max-w-xs w-full mr-auto" src="/profiles/arly.png" />
       </div>
-      <div className="col-span-1 md:col-span-3">
+      <div className="col-span-2 sm:col-span-1 md:col-span-3">
         <h3 className="text-lg font-medium">Arly Capuyan</h3>
         <span className="text-gray-600 text-sm">Secretary</span>
         <br />

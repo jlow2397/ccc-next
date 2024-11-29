@@ -1,12 +1,12 @@
 export default function ContactUsPage() {
   return (
     <>
-      <div className="col-span-full mt-20">
-        <h3 id="contact" className="text-xl font-medium">
+      <div className="col-span-full">
+        <h3 id="contact" className="text-2xl">
           Contact Us
         </h3>
       </div>
-      <div className="col-span-2">
+      <div className="col-span-full mb-auto">
         Compassion Clothing Closet
         <br /> P. O. Box 3844
         <br /> Torrance, CA 90510
