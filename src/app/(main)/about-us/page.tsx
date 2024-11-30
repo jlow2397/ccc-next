@@ -8,9 +8,12 @@ export default function AboutPage() {
         </div>
       </div>
       <div className="col-span-2 sm:col-span-1">
-        <img className="max-w-xs w-full mr-auto" src="/profiles/helen.png" />
+        <img
+          className="max-w-xs w-full mr-auto aspect-[4/5]"
+          src="/profiles/helen.png"
+        />
       </div>
-      <div className="col-span-2 sm:col-span-1 md:col-span-3">
+      <div className="col-span-2 sm:col-span-1 md:col-span-3 md:pl-4 md:border-l md:border-l-gray-100">
         <h3 className="text-lg font-medium">Helen Low</h3>
         <span className="text-gray-600 text-sm">Founder and CEO</span>
         <br />
@@ -31,9 +34,12 @@ export default function AboutPage() {
       </div>
 
       <div className="col-span-2 sm:col-span-1">
-        <img className="max-w-xs w-full mr-auto" src="/profiles/nicole.png" />
+        <img
+          className="max-w-xs w-full mr-auto aspect-[4/5] object-cover object-top"
+          src="/profiles/nicole.png"
+        />
       </div>
-      <div className="col-span-2 sm:col-span-1 md:col-span-3">
+      <div className="col-span-2 sm:col-span-1 md:col-span-3 md:pl-4 md:border-l md:border-l-gray-100">
         <h3 className="text-lg font-medium">Nicole Chang</h3>
         <span className="text-gray-600 text-sm">
           CFO and Founding Board Member
@@ -53,9 +59,12 @@ export default function AboutPage() {
         California, Marshall School of Business.
       </div>
       <div className="col-span-2 sm:col-span-1">
-        <img className="max-w-xs w-full mr-auto" src="/profiles/arly.png" />
+        <img
+          className="max-w-xs w-full mr-auto aspect-[4/5] object-cover object-bottom"
+          src="/profiles/arly.png"
+        />
       </div>
-      <div className="col-span-2 sm:col-span-1 md:col-span-3">
+      <div className="col-span-2 sm:col-span-1 md:col-span-3 md:pl-4 md:border-l md:border-l-gray-100">
         <h3 className="text-lg font-medium">Arly Capuyan</h3>
         <span className="text-gray-600 text-sm">Secretary</span>
         <br />
