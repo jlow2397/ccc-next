@@ -4,7 +4,7 @@ export default function DonatePage() {
   return (
     <>
       <div className="col-span-full">
-        <h3 id="contact" className="text-2xl">
+        <h3 id="contact" className="text-3xl font-semibold">
           Donate
         </h3>
       </div>

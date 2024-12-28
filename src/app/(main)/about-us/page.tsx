@@ -66,7 +66,9 @@ export default function AboutPage() {
       </div>
       <div className="col-span-2 sm:col-span-1 md:col-span-3 md:pl-4 md:border-l md:border-l-gray-100">
         <h3 className="text-lg font-medium">Arly Capuyan</h3>
-        <span className="text-gray-600 text-sm">Secretary</span>
+        <span className="text-gray-600 text-sm">
+          Secretary and Founding Board Member
+        </span>
         <br />
         <br />
         Arly Capuyan is from the Philippines and has worked as a Pharmacy

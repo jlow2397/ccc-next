@@ -2,7 +2,7 @@ export default function ContactUsPage() {
   return (
     <>
       <div className="col-span-full">
-        <h3 id="contact" className="text-2xl">
+        <h3 id="contact" className="text-3xl font-semibold">
           Contact Us
         </h3>
       </div>
