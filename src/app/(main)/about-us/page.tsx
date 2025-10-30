@@ -4,7 +4,7 @@ export default function AboutPage() {
       <div className="w-full col-span-full text-2xl">
         <div className="w-3/4">
           The Compassion Clothing Closet Board of Directors consists of 3
-          members of the Bread of Life Church in Torrance, CA.
+          members in Torrance, CA.
         </div>
       </div>
       <div className="col-span-2 sm:col-span-1">
@@ -72,10 +72,9 @@ export default function AboutPage() {
         <br />
         <br />
         Arly Capuyan is from the Philippines and has worked as a Pharmacy
-        Technician for almost 8 years now. She is a member of Bread of Life
-        Church in Torrance and is actively involved in different ministries
-        through her church including helping at Beacon Light Missions (ministry
-        to the homeless) in Wilmington, CA.
+        Technician for almost 8 years now. She is actively involved in different
+        ministries through her church including helping at Beacon Light Missions
+        (ministry to the homeless) in Wilmington, CA.
         <br />
         <br />
         She has the heart to serve and help where help is needed. She often
