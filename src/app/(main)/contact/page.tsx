@@ -19,6 +19,11 @@ export default function ContactUsPage() {
         >
           info@compassionclothingcloset.org
         </a>
+        <br />
+        <br />
+        If you have any issues with donating online or would like to donate via
+        check, please email us and we can assist you further. Thank you for your
+        interest and support.
       </div>
     </>
   );
