@@ -34,15 +34,6 @@ export default function NavComponent() {
           About Us
         </Link>
         <Link
-          href={"/contact"}
-          className={
-            "font-medium text-gray-500 hover:text-gray-700" +
-            (pathname === "/contact" ? " !text-gray-900" : "")
-          }
-        >
-          Contact
-        </Link>
-        <Link
           href={"/donate"}
           className={
             "font-medium text-gray-500 hover:text-gray-700" +
